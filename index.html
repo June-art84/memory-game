@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记忆翻牌小游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 游戏标题 -->
+        <h1 class="game-title">记忆翻牌挑战</h1>
+        
+        <!-- 操作说明 -->
+        <div class="game-desc">
+            <h3>游戏规则</h3>
+            <p>点击卡片翻转，连续翻开两张相同的卡片即可匹配消除；记录你的翻牌步数和用时，全部卡片匹配完成即为胜利！</p>
+        </div>
+
+        <!-- 游戏数据统计 -->
+        <div class="game-stats">
+            <div class="stat-item">
+                <span>步数：</span>
+                <span id="moves">0</span>
+            </div>
+            <div class="stat-item">
+                <span>用时：</span>
+                <span id="timer">00:00</span>
+            </div>
+            <button id="restart-btn" class="restart-btn">重新开始</button>
+        </div>
+
+        <!-- 卡片游戏区域 -->
+        <div class="card-grid" id="cardGrid"></div>
+
+        <!-- 胜利弹窗 -->
+        <div class="modal" id="winModal">
+            <div class="modal-content">
+                <h2>🎉 恭喜通关！</h2>
+                <p>总步数：<span id="finalMoves">0</span></p>
+                <p>总用时：<span id="finalTime">00:00</span></p>
+                <button id="modalRestart" class="restart-btn">再来一局</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
